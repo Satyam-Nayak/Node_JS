@@ -1,0 +1,13 @@
+Task 1
+
+create Routes folder---->create routes js file
+routes js file---->modules text file
+
+Task 2
+
+controller--->controller js file
+views---->views js file
+model---->model js file
+node---->node js file------>Node.js is an Source server environment. Node.js allows you to run javascript on the server. Start learning Node.js now
+
+// Nodejs---->Express--->JavaScript---->Data----->data.js(append data of Node.js file Here)
