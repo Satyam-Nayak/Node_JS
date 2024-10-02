@@ -40,3 +40,12 @@ const fs=require('fs')
 
 
 //?create a new folder
+// fs.mkdirSync('./Express')
+// console.log("folder created")
+
+
+//?create a nested folder
+// fs.mkdirSync('./Nodejs/node_2pm')
+// console.log("folder created")
+
+//?create file inside nested folder
