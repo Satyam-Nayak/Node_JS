@@ -30,5 +30,10 @@ const fs = require("fs")
 
 
 // append a file 
+fs.appendFile('./node.txt', ' - Appended text', (err) => {
+    if (err)
+        throw err;
+    console.log('File has been updated with appended content.');
+});
 // delete a file 
 // rename a file
