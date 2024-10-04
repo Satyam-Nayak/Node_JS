@@ -1,4 +1,4 @@
-const fs = require("fs")
+// const fs = require("fs")
 // console.log(fs)
 
 
@@ -30,10 +30,27 @@ const fs = require("fs")
 
 
 // append a file 
-fs.appendFile('./node.txt', ' - Appended text', (err) => {
-    if (err)
-        throw err;
-    console.log('File has been updated with appended content.');
-});
+// fs.appendFile('./node.txt', ' - Appended text', (err) => {
+//     if (err)
+//         throw err;
+//     console.log('File has been updated with appended content.');
+// });
 // delete a file 
 // rename a file
+
+
+//nested folder
+const fs = require('fs');
+fs.mkdir('./AC',err=>{
+    if(err) throw err;
+    console.log("folder is creatred")
+    fs.mkdir('./AC/NotWorking',err=>{
+        if(err) throw err;
+        console.log("Nested folder iscreated")
+        fs.writeFile('./AC/NotWorking/CallTechnician.js', 'Not picking the call', err=>{
+            if(err) throw err;
+            console.log("file is created inside the nested folder")
+        })
+
+    })
+})
