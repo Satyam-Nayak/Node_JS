@@ -19,6 +19,14 @@ const fs = require('fs')
 
 
 
+//!Events:
+// Events are the actions that occur during the execution of the code
+
+// data: This event fires/triggers whenever we have data to read from the stream
+// end : This event fires/triggers when there is no more data to read from the stream
+// error : This event fires/triggers when there is an error in the stream
+// finish : This event fires/triggers when the stream has finished precessing the data
+
 
 //////////====================Start===============================
 // const fs = require('fs')
@@ -39,8 +47,6 @@ const fs = require('fs')
 
 
 
-
-
 // readData.on('end',_=>{
 //     console.log("Reading is finished")
 // })
@@ -56,5 +62,20 @@ const fs = require('fs')
 
 
 //! writeable Stream
-let writeData = fs.createWriteStream('writestream.txt')
-writeData.write("Streams are collection of data like ")
+// let writeData = fs.createWriteStream('writestream.txt')
+// writeData.write("Streams are collection of data like ")
+// console.log("writestream.txt file created")
+
+
+// ======= Read and Write at the same code ===========
+// let readData = fs.createReadStream('./streams1.js','utf-8')
+// readData.on('data',data=>{
+//     fs.createWriteStream('WriteStream1.txt').write(data)
+//     console.log("Read and Write at the same time done successfully")
+// })
+
+
+//!Duplex streams:
+let readData = fs.createReadStream('./streams1.js')
+let writeData = fs.createWriteStream('WriteStream2.txt')
+readData.pipe(writeData)
