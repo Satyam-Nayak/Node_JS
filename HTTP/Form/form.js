@@ -20,11 +20,11 @@ const server = http.createServer((req, res) => {
                     
                     fs.appendFile('./form.text',`name=${name},email=${email},password=${password}\n` ,err=>{
                             if(err){
-                                res.writeHead(500,{ 'Content-Type': 'text/plain' })
+                                res.writeHead(500,{ 'Content-Type': 'text/html' })
                                 res.end(`<h1>Internal Server Error`)
                                 console.log(err)
                             }else{
-                                res.writeHead(200,{ 'Content-Type': 'text/plain' })
+                                res.writeHead(200,{ 'Content-Type': 'text/html' })
                                 res.end(`<h1>Successfully subbmitted`)
                             }
                     });
