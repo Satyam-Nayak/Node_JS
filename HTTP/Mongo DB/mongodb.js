@@ -22,7 +22,7 @@ let connectDb = async() =>{
 
 
     //======insert data from json fake user api
-    // let data = await fetch('https://fakestoreapi.com/carts')
+    // let data = await fetch('https://fakestoreapi.com/users')
     // let json= await data.json()
     // collection.insertMany(json)
 
@@ -33,7 +33,10 @@ let connectDb = async() =>{
 
 
     //--- to fetch first data from the mongo db
-    let onedata = await collection.findOne()
+    // let onedata = await collection.findOne()
+    //     console.log(onedata); 
+
+    let onedata = await collection.findOne({email:"kate@gmail.com"})
         console.log(onedata); 
             
 }
