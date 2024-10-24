@@ -10,8 +10,8 @@ let connectDb = async() =>{
     let collection = await database.createCollection('Node_2pm')
     console.log("collection is created")
 
-    // collection.insertOne({name:'Satyam',age:21,gender:'Male'})
-    // console.log("data inserted")
+    collection.insertOne({name:'Satyam',age:21,gender:'Male'})
+    console.log("data inserted")
 
     // collection.insertMany([
     //     {name:'Suman',age:30,gender:'female'},
@@ -36,8 +36,26 @@ let connectDb = async() =>{
     // let onedata = await collection.findOne()
     //     console.log(onedata); 
 
-    let singledata = await collection.findOne({email:"kate@gmail.com"})  // without condition it gives all the documnets
-        console.log(singledata); 
+    // let singledata = await collection.findOne({email:"kate@gmail.com"})  
+    // without condition it gives all the documnets
+    //    console.log(singledata); 
+
+    // let updatedata = await collection.updateOne({name:'SumanOp'},{$set:{name:'SolaMg'}})
+    // console.log("data Updated")
+
+    // let updatedata = await collection.updateMany({name:'Satyam'},{$set:{name:'Satyam OP'}})
+    // console.log("data Updated")
+
+
+    // let deletedata = await collection.deleteOne({name:'Satyam OP'})
+    // console.log("Delete the data")
+
+    // let deletedata = await collection.deleteMany({name:'Satyam OP'})
+    // console.log("Delete all 'Satyam OP' the data")
+
+    // let deletedata = await collection.deleteMany({})
+    // console.log("Delete all the data")
+
             
 }
 connectDb()
