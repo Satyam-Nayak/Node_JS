@@ -36,8 +36,8 @@ let connectDb = async() =>{
     // let onedata = await collection.findOne()
     //     console.log(onedata); 
 
-    let finddata = await collection.findOne({email:"kate@gmail.com"})
-        console.log(finddata); 
+    let singledata = await collection.findOne({email:"kate@gmail.com"})  // without condition it gives all the documnets
+        console.log(singledata); 
             
 }
 connectDb()
