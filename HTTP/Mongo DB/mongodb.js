@@ -36,8 +36,8 @@ let connectDb = async() =>{
     // let onedata = await collection.findOne()
     //     console.log(onedata); 
 
-    let onedata = await collection.findOne({email:"kate@gmail.com"})
-        console.log(onedata); 
+    let finddata = await collection.findOne({email:"kate@gmail.com"})
+        console.log(finddata); 
             
 }
 connectDb()
